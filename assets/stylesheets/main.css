@@ -14,34 +14,46 @@ body {
   font-family: nyt-franklin, helvetica, arial, sans-serif;
 }
 
+/* Page layout */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1200px 1fr;
+}
+
+/* Navbar */
+
 .nav-container {
   border-bottom: 1px solid #e2e2e2;
-  padding: 5px;
+  padding: 5px 20px;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: [nav-left-start] 240px 
-  [nav-left-end nav-title-start] 200px
-  [nav-title-end nav-right-start ]240px
+  grid-template-columns: [nav-left-start] auto 
+  [nav-left-end nav-logo-start] auto
+  [nav-logo-end nav-right-start ]auto
   [nav-right-end];
   justify-content: space-between;
+  justify-items: space-between;
   align-content: center;
   align-items: center;
 }
 
 .nav-left {
   display: grid;
+  grid-gap: 30px;
   grid-template-columns: repeat(3, auto);
-  justify-items: center;
+  align-items: center;
 }
 
 .nav-logo {
+  grid-column: nav-logo-start;
   font-size: 16px;
   height: 26px;
   width: 195px;
 }
 
 .nav-right {
-  justify-self: end;
-  padding-right: 10px;
+  grid-column: nav-right-start;
 }
 
 .menu-svg {
@@ -70,18 +82,116 @@ body {
   border: 1px solid rgb(50, 104, 145);
   border-radius: 3px;
   padding: 8px 12px;
+  text-transform: uppercase;
 }
 
-/* .content-container {
+.user-icon-svg {
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+
+.mobile-subscribe-login {
+  text-transform: uppercase;
+  grid-column: 1 / -1;
   display: grid;
-  max-width: 1000px;
-  margin: 200px auto;
-  grid-gap: 10px 50px;
-  grid-template-columns: 3fr minmax(0, 900px) 5fr;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 4px;
+  padding: 8px 20px;
+  color: rgb(50, 104, 145);
+  text-decoration: none;
+  font-size: 10px;
+  display: none;
 }
 
-.test-grid {
+.subscribe-now {
   grid-column: 2;
-} */
+  border-right: 1px solid #e2e2e2;
+  padding-right: 8px;
+}
 
+.login {
+  grid-column: -1;
+}
 
+/* Article */
+
+.content-container {
+  grid-column: 2 / span 1;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: "nyt-cheltenham";
+  color: #121212;
+  font-size: 40px;
+  font-style: italic;
+  margin: 30px 0;
+  
+}
+
+.title-image {
+  width: 100%;
+}
+
+figcaption {
+  color: #666;
+  max-width: 850px;
+}
+
+.credits {
+  color: #888;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+   
+  .nav-container {
+    align-items: center;
+    height: 53px;
+  }
+
+  .nav-left {
+    display: block;
+    align-self: center;
+  }
+
+  .search-svg,
+  .news-category {
+    display: none;
+  }
+
+  .button-navbar {
+    display: none;
+  }
+
+  .user-icon-svg {
+    display: block;
+  }
+
+  .mobile-subscribe-login {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .content-container {
+    grid-column: 1 / -1;
+  }
+}
