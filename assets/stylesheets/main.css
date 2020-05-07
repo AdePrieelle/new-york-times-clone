@@ -121,11 +121,17 @@ body {
 }
 
 .content-text {
-  display: flex;
+  /* display: grid; */
+
+  /* display: flex;
   flex-direction: column;
+  justify-content: center; */
+  width: calc(100% - 40px);
   max-width: 600px;
-  margin: 10px auto;
-  justify-content: center;
+  margin: 0px auto 20px auto;
+  font-family: 'Noto Serif', serif;
+  line-height: 30px;
+  font-size: 20px;
 }
 
 .header-title {
@@ -142,6 +148,10 @@ body {
   
 }
 
+.image-area {
+  margin-bottom: 30px;
+}
+
 .title-image {
   width: 100%;
 }
@@ -155,6 +165,95 @@ figcaption {
   color: #888;
   font-size: 13px;
 }
+
+.article-link {
+ color: #326891;
+}
+
+.createaccount-or-login {
+  font-size: 15px;
+  color: rgb(51,51,51);
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+  /* border: 1px solid black; */
+  margin: 25px auto;
+}
+
+.createaccount-link {
+  color: rgb(50, 104, 145);
+  text-decoration: none;
+}
+
+.top-line-createaccount-or-login,
+.bottom-line-createaccount-or-login {
+  border-bottom: 1px solid rgb(204, 204, 204);
+  width: 72px;
+}
+
+.top-line-createaccount-or-login {
+  margin: 0 auto 18px auto;
+}
+
+.bottom-line-createaccount-or-login {
+  margin: 18px auto 0 auto;
+}
+
+.subtitle-h2 {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+/* Section theory of inflation in article */
+
+.theory-of-inflation-container {
+
+  /* max-width: 975;
+  margin: 0 auto 50px auto; */
+
+  display: grid;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  width: calc(100% - 40px);
+  max-width: 945px;
+  margin: 0px auto 50px auto;
+  font-family: 'Noto Serif', serif;
+  /* line-height: 30px; */
+  /* font-size: 20px; */
+
+  border: 1px solid black;
+}
+
+.theory-of-inflation-title {
+  font-size: 20px;
+  font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 2px;
+}
+
+.theory-of-inflation-summary {
+  color: rgb(102, 102, 102);
+  font-family: 'nyt-cheltenham-sh', georgia, 'times new roman', times, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-right: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1023px) {
    
@@ -193,5 +292,9 @@ figcaption {
 
   .content-container {
     grid-column: 1 / -1;
+  }
+
+  figcaption {
+    margin: 10px 20px 0;
   }
 }
