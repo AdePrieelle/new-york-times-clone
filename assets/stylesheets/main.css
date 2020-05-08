@@ -85,7 +85,6 @@ body {
 
 .mobile-subscribe-login {
   text-transform: uppercase;
-  /* grid-column: 1 / -1; */
   display: grid;
   grid-template-columns: 1fr [subscribe-now-start ]
   auto [subscribe-now-end login-start] 
@@ -134,8 +133,11 @@ body {
   color: #121212;
   font-size: 40px;
   font-style: italic;
-  margin: 30px 0;
-  
+  font-weight: 700;
+  line-height: 48px;
+  margin: 40px auto 25px auto;
+  width: calc(100% - 40px);
+  max-width: 640px;
 }
 
 .image-area {
@@ -146,7 +148,7 @@ body {
   width: 100%;
 }
 
-figcaption {
+.figcaption-article-image {
   color: #666;
   max-width: 850px;
 }
@@ -157,12 +159,24 @@ figcaption {
 }
 
 .article-link {
- color: #326891;
+  color: #326891;
+}
+
+.subtitle-h2-extra-top-margin {
+  font-weight: 700;
+  margin-top: 36px;
+  font-size: 20px;
+}
+
+.subtitle-h2-equal-margin {
+  font-weight: 700;
+  font-size: 20px;
 }
 
 /* article info */
 
 .article-info {
+  width: calc(100% - 40px);
   max-width: 600px;
   margin: 0 auto;
   font-family: 'nyt-franklin', helvetica, arial, sans-serif;
@@ -234,10 +248,6 @@ figcaption {
   margin: 18px auto 0 auto;
 }
 
-.subtitle-h2 {
-  margin-top: 36px;
-  font-size: 20px;
-}
 
 /* Section theory of inflation in article */
 
@@ -270,8 +280,57 @@ figcaption {
   margin-right: 7px;
 }
 
+/* Embedded video */
 
+.figure-video {
+  max-width: 600px;
+  margin: 45px auto 40px auto;
+}
 
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.figcaption-iframe {
+  color: rgb(102, 102, 102);
+  font-family: 'nyt-imperial', georgia, "times new roman", times, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.figcaption-iframe-span {
+  color: rgb(136, 136, 136);
+  font-family: 'nyt-imperial', georgia, "times new roman", times, serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  line-height: 18px;
+}
+
+.figcaption-iframe {
+  margin: 10px 20px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+
+  .figcaption-iframe {
+    margin: 10px 20px 0;
+  }
+
+}
 
 @media screen and (max-width: 1023px) {
    
@@ -305,7 +364,8 @@ figcaption {
 
 @media screen and (max-width: 1200px) {
 
-  figcaption {
+  .figcaption-article-image {
     margin: 10px 20px 0;
   }
+
 }
