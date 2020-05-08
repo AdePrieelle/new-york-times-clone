@@ -11,14 +11,7 @@ html {
 body {
   color: #333;
   background-color: white;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
-}
-
-/* Page layout */
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1200px 1fr;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
 }
 
 /* Navbar */
@@ -26,7 +19,6 @@ body {
 .nav-container {
   border-bottom: 1px solid #e2e2e2;
   padding: 5px 20px;
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: [nav-left-start] auto 
   [nav-left-end nav-logo-start] auto
@@ -93,9 +85,11 @@ body {
 
 .mobile-subscribe-login {
   text-transform: uppercase;
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr [subscribe-now-start ]
+  auto [subscribe-now-end login-start] 
+  auto [login-end];
   grid-gap: 4px;
   padding: 8px 20px;
   color: rgb(50, 104, 145);
@@ -105,27 +99,23 @@ body {
 }
 
 .subscribe-now {
-  grid-column: 2;
+  grid-column: subscribe-now-start / subscribe-now-end;
   border-right: 1px solid #e2e2e2;
   padding-right: 8px;
 }
 
 .login {
-  grid-column: -1;
+  grid-column: login-start / login-end;
 }
 
 /* Article */
 
 .content-container {
-  grid-column: 2 / span 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .content-text {
-  /* display: grid; */
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   width: calc(100% - 40px);
   max-width: 600px;
   margin: 0px auto 20px auto;
@@ -135,7 +125,7 @@ body {
 }
 
 .header-title {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -170,13 +160,58 @@ figcaption {
  color: #326891;
 }
 
+/* article info */
+
+.article-info {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
+}
+
+.author {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  margin: 40px 0 20px 0;
+}
+
+.author-name {
+  text-decoration: underline #ccc;
+}
+
+.date-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social {
+  border-radius: 100%;
+  background-color: #eee;
+  padding: 3px;
+}
+
+/* Create account of log in section */
+
 .createaccount-or-login {
   font-size: 15px;
   color: rgb(51,51,51);
   font-weight: 700;
   line-height: 19px;
   text-align: center;
-  /* border: 1px solid black; */
   margin: 25px auto;
 }
 
@@ -200,27 +235,18 @@ figcaption {
 }
 
 .subtitle-h2 {
-  margin-top: 16px;
+  margin-top: 36px;
   font-size: 20px;
 }
 
 /* Section theory of inflation in article */
 
 .theory-of-inflation-container {
-
-  /* max-width: 975;
-  margin: 0 auto 50px auto; */
-
   display: grid;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   width: calc(100% - 40px);
   max-width: 945px;
   margin: 0px auto 50px auto;
   font-family: 'Noto Serif', serif;
-  /* line-height: 30px; */
-  /* font-size: 20px; */
 
   border: 1px solid black;
 }
@@ -243,14 +269,6 @@ figcaption {
   line-height: 18px;
   margin-right: 7px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -286,13 +304,6 @@ figcaption {
 }
 
 @media screen and (max-width: 1200px) {
-  .container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .content-container {
-    grid-column: 1 / -1;
-  }
 
   figcaption {
     margin: 10px 20px 0;
