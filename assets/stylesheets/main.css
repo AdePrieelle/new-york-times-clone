@@ -210,6 +210,7 @@ body {
 .icon {
   width: 20px;
   height: 20px;
+  margin-left: 10px;
 }
 
 .social {
@@ -350,6 +351,52 @@ body {
 
 /* Footer article */
 
+.printed-newspaper-article {
+  width: calc(100% - 40px);
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  color: rgb(102, 102, 102);
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.printed-newspaper-article-links > a {
+  color: rgb(102, 102, 102);
+  text-decoration: underline;
+}
+
+.comments-social-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.number-of-comments {
+  background-color: rgb(86, 123, 149);
+  border: 1px solid rgb(50, 104, 145);
+  border-radius: 3px;
+  color: white;
+  display: block;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.65px;
+  line-height: 24px;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  width: 330px;
+}
+
+/* Recommendations section */
+
+
+
 
 
 /* Media queries */
@@ -362,6 +409,18 @@ body {
 
   .figure-bicep2-telescope-figcaption {
     margin: 10px 20px 0;
+  }
+
+  .number-of-comments {
+    width: 100%;
+  }
+
+  .mobile-margin-left-icons {
+    margin-left: 0px;
+  }
+
+  .social-article {
+    margin-top: 15px;
   }
 
 }
