@@ -308,7 +308,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
-  margin-top: 10px;
+  margin: 10px 20px 0 0;
 }
 
 .figcaption-iframe-span {
@@ -320,13 +320,47 @@ body {
   line-height: 18px;
 }
 
-.figcaption-iframe {
+/* Figure Bicep2 telescope */
+
+.figure-bicep2-telescope {
+  max-width: 720px;
+  margin: 45px auto 40px auto;
+  font-family: 'nyt-imperial', georgia, "times new roman", times, serif;
+}
+
+.figure-bicep2-telescope-image {
+  width: 100%;
+}
+
+.figure-bicep2-telescope-figcaption {
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
   margin: 10px 20px 0 0;
 }
+
+.figure-bicep2-telescope-figcaption-span {
+  color: rgb(136, 136, 136);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  line-height: 18px;
+}
+
+/* Footer article */
+
+
+
+/* Media queries */
 
 @media screen and (max-width: 600px) {
 
   .figcaption-iframe {
+    margin: 10px 20px 0;
+  }
+
+  .figure-bicep2-telescope-figcaption {
     margin: 10px 20px 0;
   }
 
@@ -366,6 +400,14 @@ body {
 
   .figcaption-article-image {
     margin: 10px 20px 0;
+  }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+  .figure-bicep2-telescope {
+    max-width: 600px;
   }
 
 }
