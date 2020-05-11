@@ -414,7 +414,7 @@ body {
   flex-wrap: wrap;
   width: calc(100% - 40px);
   max-width: 600px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto;
 }
 
 .number-of-comments {
@@ -435,6 +435,101 @@ body {
 
 /* Recommendations section */
 
+.recommendations {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 60px auto 20px auto;
+  display: grid;
+  grid-template-columns: 8fr 3fr;
+  grid-column-gap: 30px;
+}
+
+.more-in-space-and-astronomy,
+.editors-picks {
+  grid-column: 1;
+  padding: 15px 0 25px 0;
+}
+
+.more-in-space-and-astronomy {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.recommendations-subtitle {
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.more-in-space-and-astronomy-grid,
+.editors-picks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.more-in-space-and-astronomy-grid-image,
+.editors-picks-grid-image {
+  width: 100%;
+}
+
+.more-in-space-and-astronomy-grid-image-credits,
+.editors-picks-grid-image-credits {
+  color: rgb(153, 153, 153);
+  font-family: 'nyt-cheltenham-small', georgia, "times new roman";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.3px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.more-in-space-and-astronomy-grid-image-title,
+.editors-picks-grid-image-title {
+  color: rgb(18, 18, 18);
+  font-family: 'nyt-cheltenham', georgia, "times new roman", times, serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.more-in-space-and-astronomy-grid-image-date,
+.editors-picks-grid-image-date {
+  color: rgb(153, 153, 153);
+  font-family: 'nyt-cheltenham', georgia, "times new roman", times, serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+/* Most Popular section */
+
+.most-popular {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  border-top: 1px solid black;
+  padding: 15px 0 25px 0;
+}
+
+.most-popular-title {
+  color: rgb(18, 18, 18);
+  font-family: 'nyt-cheltenham', georgia, "times new roman", times, serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 23px;
+  padding: 15px 0;
+  border-top: 1px solid rgb(226, 226, 226);
+}
+
+/* Footer */
+
+
 
 
 
@@ -442,11 +537,11 @@ body {
 /* Media queries */
 
 @media screen and (max-width: 600px) {
-
+  
   .figcaption-iframe {
     margin: 10px 20px 0;
   }
-
+  
   .figure-bicep2-telescope-figcaption {
     margin: 10px 20px 0;
   }
@@ -463,9 +558,76 @@ body {
     margin-top: 15px;
   }
 
+  .more-in-space-and-astronomy-grid,
+  .editors-picks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(2),
+  .editors-picks-grid-item:nth-child(2) {
+    border-top: 1px solid rgb(226, 226, 226);;
+    border-bottom: 1px solid rgb(226, 226, 226);;
+    padding: 15px 0;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(2) > img,
+  .more-in-space-and-astronomy-grid-item:nth-child(3) > img,
+  .editors-picks-grid-item:nth-child(2) > img,
+  .editors-picks-grid-item:nth-child(3) > img {
+    float: right;
+    width: 62px;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(2) > .more-in-space-and-astronomy-grid-image-credits,
+  .more-in-space-and-astronomy-grid-item:nth-child(3) > .more-in-space-and-astronomy-grid-image-credits,
+  .editors-picks-grid-item:nth-child(2) > .editors-picks-grid-image-credits,
+  .editors-picks-grid-item:nth-child(3) > .editors-picks-grid-image-credits {
+    display: none;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(2) > .more-in-space-and-astronomy-grid-image-title,
+  .more-in-space-and-astronomy-grid-item:nth-child(3) > .more-in-space-and-astronomy-grid-image-title,
+  .editors-picks-grid-item:nth-child(2) > .editors-picks-grid-image-title,
+  .editors-picks-grid-item:nth-child(3) > .editors-picks-grid-image-title {
+    width: 80%;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(4),
+  .more-in-space-and-astronomy-grid-item:nth-child(5),
+  .more-in-space-and-astronomy-grid-item:nth-child(6) {
+    display: none;
+  }
+
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 739px) {
+
+  .most-popular {
+    display: none;
+  }
+
+  .recommendations {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  
+  .more-in-space-and-astronomy-grid,
+  .editors-picks-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .more-in-space-and-astronomy-grid-item:nth-child(5),
+  .more-in-space-and-astronomy-grid-item:nth-child(6),
+  .editors-picks-grid-item:nth-child(3) {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1025px) {
    
   .nav-container {
     align-items: center;
@@ -493,6 +655,7 @@ body {
   .mobile-subscribe-login {
     display: grid;
   }
+
 }
 
 @media screen and (max-width: 1200px) {
