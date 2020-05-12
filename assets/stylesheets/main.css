@@ -778,6 +778,34 @@ body {
 
 }
 
+@media screen and (max-width: 1149px) {
+
+  .footer-nav-links-title-sublinks {
+    display: none;
+  }
+
+  .footer-nav-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav-links-subscribe {
+    border-left: 0;
+    padding-left: 0px;
+  }
+
+  .mobile-nav-links {
+    border-top: 1px solid #e2e2e2;
+    display: grid;
+    align-items: center;
+    padding: 15px 0 5px 0;
+  }
+
+  .footer-nav-links {
+    padding-bottom: 0px;
+  }
+
+}
+
 @media screen and (max-width: 1200px) {
 
   .figcaption-article-image {
