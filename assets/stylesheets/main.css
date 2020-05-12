@@ -529,6 +529,126 @@ body {
 
 /* Footer */
 
+.footer-nav {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 2px solid #e2e2e2;
+}
+
+.footer-nav-links {
+  margin-top: 1px;
+  padding-bottom: 15px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-nav-links-nyt-logo-home-page-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.nyt-logo-footer {
+  width: 184px;
+  height: 44px;
+}
+
+.go-to-home-page {
+  align-self: center;
+  color: rgb(86, 123, 149);
+  font-family: 'nyt-cheltenham-sh', helvetica, arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 11px;
+  text-decoration: none;
+  padding-top: 15px;
+}
+
+.go-to-home-page-arrows {
+  font-size: 8px;
+}
+
+.footer-nav-links-title {
+  color: rgb(51, 51, 51);
+  font-family: 'nyt-cheltenham-sh', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.footer-nav-links-title-sublinks-item {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: 'nyt-cheltenham-sh', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  height: 23px;
+  line-height: 16px;
+  text-transform: capitalize;
+}
+
+.footer-nav-links-subscribe {
+  border-left: 1px solid #e2e2e2;
+  padding-left: 15px;
+}
+
+.subscribe-svg-subtitles {
+  margin-bottom: 10px;
+}
+
+.footer-nav-links-title-sublinks-subscribe-svg {
+  height: 13px;
+  width: 13px;
+  vertical-align: middle;
+}
+
+.footer-nav-links-title-sublinks-subscribe-svg-subtitle {
+  color: rgb(0, 0, 0);
+  font-family: 'nyt-cheltenham-sh', helvetica, arial, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 15px;
+  padding-bottom: 0px;
+}
+
+.subscribe-email-corporate-education {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.subscribe-border-education-mobile {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.mobile-replica-languages {
+  margin-top: 5px;
+}
+
+.footer-nav-links-title-sublinks-item-small {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  font-family: 'nyt-cheltenham-sh', helvetica, arial, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 150px;
+  font-size: 11px;
+  font-weight: 500;
+  height: 23px;
+  line-height: 21px;
+}
+
+
 
 
 
